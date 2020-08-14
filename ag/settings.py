@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = 'n*+y1#6(8h4t7pq**@3v%lng0a$jx114lb+c(4tr*_j+)-r75%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False 
+DEBUG = True
 
 ALLOWED_HOSTS = ['the7thchords.herokuapp.com', '127.0.0.1']
 
@@ -119,11 +119,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-   #  STATICFILES_DIRS = [
-   #      os.path.join(BASE_DIR, 'static')
-   # ]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 STATIC_URL = '/static/'
@@ -132,4 +132,3 @@ STATIC_URL = '/static/'
 
 MEDIA_URL ="/images/"
 
-django_heroku.settings(local())
